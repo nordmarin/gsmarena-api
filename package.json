@@ -1,0 +1,23 @@
+{
+  "name": "gsmarena",
+  "version": "1.0.0",
+  "description": "Parse GSMArena and then return as JSON",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gsmarena",
+    "api"
+  ],
+  "author": "Kirill Potapenko (kirill.potap97@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "request": "^2.88.2"
+  }
+}
