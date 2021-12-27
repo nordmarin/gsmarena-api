@@ -35,7 +35,7 @@ router.get('/brands', [],
 router.get('/brand/:brand', [],
     async (req, res) => {
         request({
-            url: URI + '/' + req.params.brand,
+            url: URI + '/' + req.params.brand + '.php',
             headers: {
                 "User-Agent": "request"
             }
@@ -60,7 +60,7 @@ router.get('/brand/:brand', [],
 router.get('/device/:device', [],
     async (req, res) => {
         request({
-            url: URI + '/' + req.params.device,
+            url: URI + '/' + req.params.device + '.php',
             headers: {
                 "User-Agent": "request"
             }

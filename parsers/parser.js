@@ -10,7 +10,7 @@ class Parser {
             let brand = {
                 name: $(el).find('a').text().replace(' devices', '').replace(/[0-9]/g, ""),
                 devices: $(el).find('span').text().replace(' devices', ''),
-                url: $(el).find('a').attr('href')
+                url: $(el).find('a').attr('href').replace('.php', '')
             }
             json.push(brand)
         })
@@ -27,7 +27,7 @@ class Parser {
             let phone = {
                 name: $(el).find('span').text(),
                 img: $(el).find('img').attr('src'),
-                url: $(el).find('a').attr('href'),
+                url: $(el).find('a').attr('href').replace('.php', ''),
                 description: $(el).find('img').attr('title')
             }
             json.push(phone)
@@ -36,15 +36,18 @@ class Parser {
         let pagesData = []
         const pages = $('.review-nav .nav-pages').find('a, strong')
         pages.each((i, el) => {
+            console.log(el.name)
             let phone = {
-                name: $(el).text(),
-                url: $(el).attr('href'),
+                number: $(el).text()
+            }
+            if (el.name !== 'strong') {
+                phone.url = $(el).attr('href').replace('.php', '')
             }
             pagesData.push(phone)
         })
 
-        const nextPage = $('a.pages-next').attr('href')
-        const prevPage = $('a.pages-prev').attr('href')
+        const nextPage = $('a.pages-next').attr('href').replace('.php', '')
+        const prevPage = $('a.pages-prev').attr('href').replace('.php', '')
 
         const data = {
             data: json,
@@ -126,7 +129,7 @@ class Parser {
             const phone = {
                 name: $(el).find('span').html().split('<br>').join(' '),
                 img: $(el).find('img').attr('src'),
-                url: $(el).find('a').attr('href'),
+                url: $(el).find('a').attr('href').replace('.php', ''),
                 description: $(el).find('img').attr('title')
             }
             json.push(phone)
@@ -149,17 +152,17 @@ class Parser {
             rankN.each((index, ele) => {
 
                 const position = $('td[headers=th3a]', ele).text().replace('.', "")
-                const name = $('nobr', ele).text()
-                const url = $('a', ele).attr('href')
-                const daily_hits = $('td[headers=th3c]', ele).text()
+                if (position !== "") {
+                    const name = $('nobr', ele).text()
+                    const url = $('a', ele).attr('href').replace('.php','')
+                    const daily_hits = $('td[headers=th3c]', ele).text()
 
-                const a = {
-                    position: position,
-                    name: name,
-                    url: url,
-                    daily_hits: daily_hits
-                }
-                if (a.position !== "") {
+                    const a = {
+                        position: position,
+                        name: name,
+                        url: url,
+                        daily_hits: daily_hits
+                    }
                     rank.push(a)
                 }
             })
@@ -185,7 +188,7 @@ class Parser {
             const image = $(el).find('.row a img').attr('src')
             const url = $(el).find('.row a.image').attr('href')
             const title = $(el).find('.row .phone div h3').text()
-            const link = $(el).find('.row .phone div a').attr('href')
+            const link = $(el).find('.row .phone div a').attr('href').replace('.php', '')
             const description = $(el).find('.row .phone p a').text()
 
             const deal = {
