@@ -70,15 +70,15 @@ Endpoint `/api/brand/:brand`, example `/api/brand/apple-phones-48`
   ],
   "pages": [
     {
-      "number": "1"
+      "number": 1,
+      "active": true
     },
     {
-      "number": "2",
+      "number": 2,
       "url": "apple-phones-f-48-0-p2"
     }
   ],
-  "next": "apple-phones-f-48-0-p2",
-  "prev": "#1"
+  "next": "apple-phones-f-48-0-p2"
 }
 ```
 

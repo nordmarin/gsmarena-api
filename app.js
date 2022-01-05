@@ -2,7 +2,7 @@ const express = require('express')
 require('dotenv').config()
 const app = express()
 
-app.use('/api/', require('./routes/routes'))
+app.use('/api/', require('./src/routes'))
 
 const PORT = process.env.port || 5000
 
@@ -15,6 +15,6 @@ async function start() {
     }
 }
 
-start()
+start().then()
 
 module.exports = app
