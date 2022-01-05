@@ -7,6 +7,7 @@ The API basically reads from GSMArena website and results JSON data.
 ## Table of Contents
 
 * [Implemented Features](#implemented-features)
+* [Online Demo](#online-demo)
 * [Quick Start](#quick-start)
 * [Brand list](#brand-list)
 * [Device list by brand](#device-list-by-brand)
@@ -16,10 +17,9 @@ The API basically reads from GSMArena website and results JSON data.
 * [Deals](#deals)
 * [Glossary](#glossary)
 * [Glossary detail](#glossary-detail)
+* [Proxy](#proxy)
 * [Contact](#contact)
 * [License](#license)
-
-[comment]: <> (* [Proxy]&#40;#proxy&#41;)
 
 ## Implemented Features
 
@@ -35,11 +35,22 @@ The API basically reads from GSMArena website and results JSON data.
 - [ ] News
 - [ ] Reviews
 
+## Online Demo
+
+* [Brand list](https://gsmarena-api.herokuapp.com/api/brands)
+* [Device list by brand](https://gsmarena-api.herokuapp.com/api/brand/apple-phones-48)
+* [Device detail](https://gsmarena-api.herokuapp.com/api/device/apple_iphone_13_pro_max-11089)
+* [Searching for device](https://gsmarena-api.herokuapp.com/api/search/casio)
+* [Top](https://gsmarena-api.herokuapp.com/api/top)
+* [Deals](https://gsmarena-api.herokuapp.com/api/deals)
+* [Glossary](https://gsmarena-api.herokuapp.com/api/glossary)
+* [Glossary detail](https://gsmarena-api.herokuapp.com/api/glossary/xenon-flash)
+
 ## Quick Start
 
 ```bash
 npm install
-npm run server
+npm start
 ```
 
 ## Brand list
@@ -205,9 +216,9 @@ Endpoint `/api/glossary/:term`, example `/api/glossary/xenon-flash`
 }
 ```
 
-[comment]: <> (## Proxy)
+## Proxy
 
-[comment]: <> (If you need to use proxy, add a `HTTP_PROXY` constant in `.env` file, or `HTTPS_PROXY` if you use `https`)
+If you want to use proxy add a constant `HTTP_PROXY` in `.env` file or `HTTPS_PROXY` if you use `https`
 
 ## Contact
 
