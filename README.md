@@ -19,6 +19,8 @@ The API basically reads from GSMArena website and results JSON data.
 * [Contact](#contact)
 * [License](#license)
 
+[comment]: <> (* [Proxy]&#40;#proxy&#41;)
+
 ## Implemented Features
 
 - [x] Get all brands
@@ -202,6 +204,10 @@ Endpoint `/api/glossary/:term`, example `/api/glossary/xenon-flash`
   "html": "<p>A xenon flash produces an extremely intense full-spectrum white...</p>"
 }
 ```
+
+[comment]: <> (## Proxy)
+
+[comment]: <> (If you need to use proxy, add a `HTTP_PROXY` constant in `.env` file, or `HTTPS_PROXY` if you use `https`)
 
 ## Contact
 

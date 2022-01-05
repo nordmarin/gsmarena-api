@@ -4,7 +4,7 @@ const app = express()
 
 app.use('/api/', require('./src/routes'))
 
-const PORT = process.env.port || 5000
+const PORT = process.env.PORT || 3000
 
 async function start() {
     try {
