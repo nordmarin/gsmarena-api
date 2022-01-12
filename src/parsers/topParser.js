@@ -2,14 +2,14 @@ const cheerio = require('cheerio')
 
 exports.top = (html) => {
     const $ = cheerio.load(html)
-    let json = []
+    const json = []
 
     const ranks = $('.sidebar.col.left').find('.module.module-rankings.s3')
     ranks.each((i, el) => {
         const category = $(el).find('h4').text()
         const rankN = $(el).find('tr')
 
-        let rank = []
+        const rank = []
         rankN.each((index, ele) => {
             const position = $('td[headers=th3a]', ele).text().replace('.', "")
             if (position !== "") {

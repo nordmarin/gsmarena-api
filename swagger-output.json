@@ -1,0 +1,147 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "GSMArena",
+    "description": "Parse GSMArena website then return data as JSON",
+    "version": "1.0.0"
+  },
+  "host": "gsmarena-api.herokuapp.com",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/brands": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Get all brands",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/brand/{brand}": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Get devices by brand",
+        "description": "",
+        "parameters": [
+          {
+            "name": "brand",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "schema": {
+              "type": "string",
+              "example": "apple-phones-48"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/device/{device}": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Get device specification",
+        "description": "",
+        "parameters": [
+          {
+            "name": "device",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "schema": {
+              "type": "string",
+              "example": "apple_iphone_13_pro_max-11089"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/deals": {
+      "get": {
+        "tags": [
+          "Hot deals"
+        ],
+        "summary": "Hot deals",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/top": {
+      "get": {
+        "tags": [
+          "Top of devices"
+        ],
+        "summary": "Top of devices",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/glossary": {
+      "get": {
+        "tags": [
+          "Glossary"
+        ],
+        "summary": "Glossary",
+        "description": "",
+        "parameters": [],
+        "responses": {}
+      }
+    },
+    "/glossary/{term}": {
+      "get": {
+        "tags": [
+          "Glossary"
+        ],
+        "summary": "Glossary detail",
+        "description": "",
+        "parameters": [
+          {
+            "name": "term",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "schema": {
+              "type": "string",
+              "example": "xenon-flash"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    },
+    "/search/{device}": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Find   by keyword",
+        "description": "",
+        "parameters": [
+          {
+            "name": "device",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "schema": {
+              "type": "string",
+              "example": "casio"
+            }
+          }
+        ],
+        "responses": {}
+      }
+    }
+  }
+}

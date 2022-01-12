@@ -2,15 +2,16 @@ const cheerio = require('cheerio')
 
 exports.search = (html) => {
     const $ = cheerio.load(html)
-    let json = []
+    const json = []
 
     const phones = $('.makers').find('li')
     phones.each((i, el) => {
+        const imgBlock = $(el).find('img')
         const phone = {
             name: $(el).find('span').html().split('<br>').join(' '),
-            img: $(el).find('img').attr('src'),
+            img: imgBlock.attr('src'),
             url: $(el).find('a').attr('href').replace('.php', ''),
-            description: $(el).find('img').attr('title')
+            description: imgBlock.attr('title')
         }
         json.push(phone)
     })

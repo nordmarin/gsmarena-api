@@ -8,15 +8,9 @@ The API basically reads from GSMArena website and results JSON data.
 
 * [Implemented Features](#implemented-features)
 * [Online Demo](#online-demo)
+* [Documentation](#documentation)
 * [Quick Start](#quick-start)
-* [Brand list](#brand-list)
-* [Device list by brand](#device-list-by-brand)
-* [Device detail](#device-detail)
-* [Searching for device](#searching-for-device)
-* [Top](#top)
-* [Deals](#deals)
-* [Glossary](#glossary)
-* [Glossary detail](#glossary-detail)
+* [Endpoints](#endpoints)
 * [Proxy](#proxy)
 * [Contact](#contact)
 * [License](#license)
@@ -46,6 +40,10 @@ The API basically reads from GSMArena website and results JSON data.
 * [Glossary](https://gsmarena-api.herokuapp.com/api/glossary)
 * [Glossary detail](https://gsmarena-api.herokuapp.com/api/glossary/xenon-flash)
 
+## Documentation
+
+Click [here](http://gsmarena-api.herokuapp.com/doc) to view the Swagger UI documentation
+
 ## Quick Start
 
 ```bash
@@ -53,9 +51,11 @@ npm install
 npm start
 ```
 
-## Brand list
+## Endpoints
 
-Endpoint `/api/brands`
+### Brand list
+
+Endpoint `/brands`
 
 ```json
 [
@@ -67,9 +67,9 @@ Endpoint `/api/brands`
 ]
 ```
 
-## Device list by brand
+### Device list by brand
 
-Endpoint `/api/brand/:brand`, example `/api/brand/apple-phones-48`
+Endpoint `/brand/:brand`, example `/brand/apple-phones-48`
 
 ```json
 {
@@ -95,9 +95,9 @@ Endpoint `/api/brand/:brand`, example `/api/brand/apple-phones-48`
 }
 ```
 
-## Device detail
+### Device detail
 
-Endpoint `/api/device/:device`, example `/api/device/apple_iphone_13_pro_max-11089`
+Endpoint `/device/:device`, example `/device/apple_iphone_13_pro_max-11089`
 
 ```json
 {
@@ -124,9 +124,9 @@ Endpoint `/api/device/:device`, example `/api/device/apple_iphone_13_pro_max-110
 }
 ```
 
-## Searching for device
+### Searching for device
 
-Endpoint `/api/search/:device`, example `/api/search/casio`
+Endpoint `/search/:device`, example `/search/casio`
 
 ```json
 [
@@ -139,9 +139,9 @@ Endpoint `/api/search/:device`, example `/api/search/casio`
 ]
 ```
 
-## Top
+### Top
 
-Endpoint `/api/top`
+Endpoint `/top`
 
 ```json
 [
@@ -159,9 +159,9 @@ Endpoint `/api/top`
 ]
 ```
 
-## Deals
+### Deals
 
-Endpoint `/api/deals`
+Endpoint `/deals`
 
 ```json
 [
@@ -187,9 +187,9 @@ Endpoint `/api/deals`
 ]
 ```
 
-## Glossary
+### Glossary
 
-Endpoint `/api/glossary`
+Endpoint `/glossary`
 
 ```json
 [
@@ -205,9 +205,9 @@ Endpoint `/api/glossary`
 ]
 ```
 
-## Glossary detail
+### Glossary detail
 
-Endpoint `/api/glossary/:term`, example `/api/glossary/xenon-flash`
+Endpoint `/glossary/:term`, example `/glossary/xenon-flash`
 
 ```json
 {

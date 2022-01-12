@@ -2,7 +2,7 @@ const cheerio = require('cheerio')
 
 exports.deals = (html) => {
     const $ = cheerio.load(html)
-    let json = []
+    const json = []
     const devices = $('#body').find('.pricecut')
 
     devices.each((i, el) => {
@@ -29,7 +29,7 @@ exports.deals = (html) => {
         }
 
         const history = $(el).find('.history .stats')
-        let historyN = []
+        const historyN = []
         history.children().each((index, elem) => {
             if (index % 2 === 0) {
                 historyN.push({time: $(elem).text()})

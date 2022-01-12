@@ -2,13 +2,14 @@ const cheerio = require('cheerio')
 
 exports.brands = (html) => {
     const $ = cheerio.load(html)
-    let json = []
+    const json = []
     const brands = $('table').find('td')
     brands.each((i, el) => {
-        let brand = {
-            name: $(el).find('a').text().replace(' devices', '').replace(/[0-9]/g, ""),
+        const aBlock = $(el).find('a')
+        const brand = {
+            name: aBlock.text().replace(' devices', '').replace(/[0-9]/g, ""),
             devices: $(el).find('span').text().replace(' devices', ''),
-            url: $(el).find('a').attr('href').replace('.php', '')
+            url: aBlock.attr('href').replace('.php', '')
         }
         json.push(brand)
     })
@@ -19,23 +20,24 @@ exports.brands = (html) => {
 
 exports.brand = (html) => {
     const $ = cheerio.load(html)
-    let json = []
+    const json = []
     const phones = $('.makers').find('li')
 
     phones.each((i, el) => {
-        let phone = {
+        const imgBlock = $(el).find('img')
+        const phone = {
             name: $(el).find('span').text(),
-            img: $(el).find('img').attr('src'),
+            img: imgBlock.attr('src'),
             url: $(el).find('a').attr('href').replace('.php', ''),
-            description: $(el).find('img').attr('title')
+            description: imgBlock.attr('title')
         }
         json.push(phone)
     })
 
-    let pagesData = []
+    const pagesData = []
     const pages = $('.review-nav .nav-pages').find('a, strong')
     pages.each((i, el) => {
-        let page = {
+        const page = {
             number: parseInt($(el).text()),
         }
         if (el.name !== 'strong') {
@@ -64,7 +66,7 @@ exports.brand = (html) => {
         }
     }
 
-    let data = {
+    const data = {
         data: json
     }
 
@@ -95,7 +97,7 @@ exports.device = (html) => {
     const battery_size = $('.accent-battery').text()
     const battery_type = $('div[data-spec=battype-hl]').text()
 
-    let quick_spec = []
+    const quick_spec = []
     quick_spec.push({name: 'Display size', value: display_size})
     quick_spec.push({name: 'Display resolution', value: display_res})
     quick_spec.push({name: 'Camera pixels', value: camera_pixels})
@@ -111,9 +113,9 @@ exports.device = (html) => {
     const img_url = $('.specs-photo-main a').attr('href')
 
     const specNode = $('table')
-    let spec_detail = []
+    const spec_detail = []
     specNode.each((i, el) => {
-        let specList = []
+        const specList = []
         const category = $(el).find('th').text()
         const specN = $(el).find('tr')
         specN.each((index, ele) => {

@@ -2,7 +2,7 @@ const cheerio = require('cheerio')
 
 exports.glossary = (html) => {
     const $ = cheerio.load(html)
-    let json = []
+    const json = []
 
     const terms = $('#body').find('.st-text')
     terms.children().each((index, el) => {
