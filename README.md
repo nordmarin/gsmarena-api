@@ -31,14 +31,14 @@ The API basically reads from GSMArena website and results JSON data.
 
 ## Online Demo
 
-* [Brand list](https://gsmarena-api.herokuapp.com/api/brands)
-* [Device list by brand](https://gsmarena-api.herokuapp.com/api/brand/apple-phones-48)
-* [Device detail](https://gsmarena-api.herokuapp.com/api/device/apple_iphone_13_pro_max-11089)
-* [Searching for device](https://gsmarena-api.herokuapp.com/api/search/casio)
-* [Top](https://gsmarena-api.herokuapp.com/api/top)
-* [Deals](https://gsmarena-api.herokuapp.com/api/deals)
-* [Glossary](https://gsmarena-api.herokuapp.com/api/glossary)
-* [Glossary detail](https://gsmarena-api.herokuapp.com/api/glossary/xenon-flash)
+* [Brand list](https://gsmarena-api.herokuapp.com/brands)
+* [Device list by brand](https://gsmarena-api.herokuapp.com/brand/apple-phones-48)
+* [Device detail](https://gsmarena-api.herokuapp.com/device/apple_iphone_13_pro_max-11089)
+* [Searching for device](https://gsmarena-api.herokuapp.com/search/casio)
+* [Top](https://gsmarena-api.herokuapp.com/top)
+* [Deals](https://gsmarena-api.herokuapp.com/deals)
+* [Glossary](https://gsmarena-api.herokuapp.com/glossary)
+* [Glossary detail](https://gsmarena-api.herokuapp.com/glossary/xenon-flash)
 
 ## Documentation
 
