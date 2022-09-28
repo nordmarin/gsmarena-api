@@ -4,7 +4,7 @@
   "description": "Parse GSMArena and then return as JSON",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node swagger.js && node app.js",
     "server": "nodemon app.js",
     "swagger-autogen": "node swagger.js",
     "test": "echo \"Error: no test specified\" && exit 1"

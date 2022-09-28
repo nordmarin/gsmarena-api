@@ -142,6 +142,28 @@
         ],
         "responses": {}
       }
+    },
+    "/advSearch/{device}": {
+      "get": {
+        "tags": [
+          "Catalog"
+        ],
+        "summary": "Find   by free text",
+        "description": "",
+        "parameters": [
+          {
+            "name": "device",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "schema": {
+              "type": "string",
+              "example": "xiaomi"
+            }
+          }
+        ],
+        "responses": {}
+      }
     }
   }
 }
