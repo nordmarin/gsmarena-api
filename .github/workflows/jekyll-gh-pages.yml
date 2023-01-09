@@ -45,8 +45,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-#       - name: Deploy to GitHub Pages
-#         id: deployment
-#         uses: actions/deploy-pages@v1
-      - name: Deploy React to GitHub Pages
-        uses: bitovi/github-actions-react-to-ghp@v1.2.0
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
