@@ -6,7 +6,7 @@ const doc = {
         title: 'GSMArena',
         description: 'Parse GSMArena website then return data as JSON',
     },
-    host: process.env.HOST_URL || 'localhost:3000',
+    host: process.env.HOST_URL || 'localhost:3001',
     schemes: ['http']
 }
 

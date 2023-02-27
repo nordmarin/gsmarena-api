@@ -4,11 +4,13 @@ GSMArena phone specification and finder. This project is still in early developm
 
 The API basically reads from GSMArena website and results JSON data.
 
+This Fork is adding request caching via the "cached-request" package for faster operation and to avoid IP ban from GSM-Arena.
+
 ## Table of Contents
 
+<!-- * [Online Demo](#online-demo)
+* [Documentation](#documentation) -->
 * [Implemented Features](#implemented-features)
-* [Online Demo](#online-demo)
-* [Documentation](#documentation)
 * [Quick Start](#quick-start)
 * [Endpoints](#endpoints)
 * [Proxy](#proxy)
@@ -17,6 +19,7 @@ The API basically reads from GSMArena website and results JSON data.
 
 ## Implemented Features
 
+- [x] Request Caching with TTL=600000
 - [x] Get all brands
 - [x] Get devices by brand
 - [x] Get device specification
@@ -28,7 +31,7 @@ The API basically reads from GSMArena website and results JSON data.
 - [ ] Find devices by advanced filters
 - [ ] News
 - [ ] Reviews
-
+<!-- 
 ## Online Demo
 
 * [Brand list](https://gsmarena-api.herokuapp.com/brands)
@@ -43,7 +46,7 @@ The API basically reads from GSMArena website and results JSON data.
 ## Documentation
 
 Click [here](http://gsmarena-api.herokuapp.com/doc) to view the Swagger UI documentation
-
+ -->
 ## Quick Start
 
 ```bash
@@ -222,7 +225,9 @@ If you want to use proxy add a constant `HTTP_PROXY` in `.env` file or `HTTPS_PR
 
 ## Contact
 
-Created by [@nordmarin](https://t.me/nordmarin) - feel free to contact me!
+Created by [@spirosbond](https://github.com/spirosbond) - feel free to contact me!
+
+Thanks to nordmarin!
 
 ## License
 

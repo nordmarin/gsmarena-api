@@ -1,9 +1,14 @@
 const request = require('request')
+,   cachedRequest = require('cached-request')(request)
+,   cacheDirectory = "/tmp/cache";
+
 const {success, failure} = require("../utils/response")
+cachedRequest.setCacheDirectory(cacheDirectory);
+cachedRequest.setValue('ttl', process.env.TTL);
 
 exports.send = (res, url, func) => {
     try {
-        request({
+        cachedRequest({
             url: url,
             headers: {
                 "User-Agent": "request"

@@ -4,7 +4,7 @@
   "description": "Parse GSMArena and then return as JSON",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "PORT=3001 node app.js",
     "server": "nodemon app.js",
     "swagger-autogen": "node swagger.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,7 +21,8 @@
     "express": "^4.17.2",
     "nodemon": "^2.0.15",
     "request": "^2.88.2",
-    "swagger-ui-express": "^4.3.0"
+    "swagger-ui-express": "^4.3.0",
+    "cached-request": "^3.0.0"
   },
   "devDependencies": {
     "swagger-autogen": "^2.18.6"
