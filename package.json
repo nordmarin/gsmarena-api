@@ -1,14 +1,13 @@
 {
-  "name": "gsmarena",
-  "version": "1.0.0",
+  "name": "gsmarena-api",
+  "version": "2.0.4",
   "description": "Parse GSMArena and then return as JSON",
   "main": "index.js",
-  "scripts": {
-    "start": "node app.js",
-    "server": "nodemon app.js",
-    "swagger-autogen": "node swagger.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nordmarin/gsmarena-api.git"
   },
+  "scripts": {},
   "keywords": [
     "gsmarena",
     "api"
@@ -16,14 +15,8 @@
   "author": "Kirill Potapenko (kirill.potap97@gmail.com)",
   "license": "MIT",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.10",
-    "dotenv": "^10.0.0",
-    "express": "^4.17.2",
-    "nodemon": "^2.0.15",
-    "request": "^2.88.2",
-    "swagger-ui-express": "^4.3.0"
+    "axios": "^1.2.5",
+    "cheerio": "^1.0.0-rc.10"
   },
-  "devDependencies": {
-    "swagger-autogen": "^2.18.6"
-  }
+  "devDependencies": {}
 }
