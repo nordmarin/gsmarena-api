@@ -21,11 +21,8 @@ const getBrands = async () => {
 };
 
 const getNextPage = ($) => {
-    const nextPage = $('a.pages-next').attr('href');
+    const nextPage = $('a.prevnextbutton[title="Next page"]').attr('href');
     if (nextPage) {
-        if (nextPage.indexOf('#') >= 0) {
-            return false;
-        }
         return nextPage.replace('.php', '');
     }
     return false;
