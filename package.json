@@ -1,6 +1,6 @@
 {
   "name": "gsmarena-api",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "description": "Parse GSMArena and then return as JSON",
   "main": "index.js",
   "repository": {
